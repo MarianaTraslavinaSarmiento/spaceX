@@ -55,7 +55,6 @@ body{
 
 .description__item {
     /* background: blue; */
-    overflow-y: auto;
     height: 75vh;
 }
 
@@ -68,7 +67,7 @@ body{
 
     width: 260px;
     height: 260px;
-    border-radius: 15px;
+
     
 }
 
@@ -104,7 +103,7 @@ h3{
     height: 80px;
     display: flex;
     align-items: center;
-    border-radius: 10px 0px 0px 10px;
+
 }
 
 .stage__photo img{
@@ -119,7 +118,7 @@ h3{
     display: flex;
     gap: 10px;
     align-items: center;
-    border-radius: 10px;
+
     
 }
 

@@ -1,90 +1,3 @@
-/* <div class="rocket__image">
-<!-- Imagen del cohete -->
-<img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" alt="">
-</div>
-
-<!-- // Id del cohete -->
-<div class="rocket__id">
-<p id="id_rocket">ID: 5e9d0d95eda69974db09d1ed</p>
-</div>
-
-<!-- titulo del cohete -->
-<h3 id="stages__title">Stages</h3>
-
-<!-- Contenedor de los estados del cohete -->
-<div class="stages__container">
-<!-- contenedor de la etapa 1 -->
-<div class="stage_1">
-    <!-- icono de la etapa 1 -->
-    <div class="stage__photo">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/one-7211787-5889119.png?f=webp" alt="">
-    </div>
-    <!-- informacion de la etapa 1 -->
-    <div class="stage__information">
-        <p id="1_reusableStage"><b>Reusable: </b>True</p>
-        <p id="1_fuel"><b>Fuel tons: </b>2839474</p>
-        <p id="1_engines"><b>Engines: </b>7</p>
-    </div>
-</div>
-
-<!-- contenedor de la etapa 2 -->
-<div class="stage_2">
-    <!-- icono de la etapa 2 -->
-    <div class="stage__photo">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/two-7211788-5889120.png" alt="">
-    </div>
-    <!-- informacion de la etapa 2 -->
-    <div class="stage__information">
-        <p id="2_reusableStage"><b>Reusable: </b>True</p>
-        <p id="2_fuel"><b>Fuel tons: </b>2839474</p>
-        <p id="2_engines"><b>Engines: </b>7</p>
-    </div>
-</div>
-
-</div>
-
-<!-- mas informacion del cohete -->
-
-<h3 id="more__information">More information</h3>
-<!-- contenedor de la informacion -->
-<div class="more_information_rocket">
-<!-- first flight -->
-<div class="first_flight">
-    <div class="icon">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/rocket-3994327-3307661.png" alt="">
-    </div>
-    <div class="text">
-        <h4 id="first_flight_title">First flight</h4>
-        <p id="date_first_flight">2021-12-01</p>
-    </div>
-</div>
-
-<!-- cost launch -->
-
-<div class="cost_launch">
-    <div class="icon">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dollar-5374098-4492234.png?f=webp" alt="">
-    </div>
-    <div class="text">
-        <h4 id="cost_launch_title">Cost of launch</h4>
-        <p id="cost_dollars">700000</p>
-    </div>
-
-</div>
-
-<!-- status -->
-
-<div class="status">
-    <div class="icon">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/switch-on-8820071-7139032.png?f=webp" alt="">
-    </div>
-    <div class="text">
-        <h4 id="status_title">Status</h4>
-        <p id="status_rocket">Active</p>
-    </div>
-
-</div>
-</div> */
 
 
 export const getAllRocketInformation= (rocket) => {
@@ -94,9 +7,6 @@ export const getAllRocketInformation= (rocket) => {
     let rocketDivImage = document.createElement('div')
     rocketDivImage.classList.add('rocket__image')
     let rocketImage = document.createElement('img')
-    rocketImage.src = rocket.flickr_images[1]
-    
-    rocketDivImage.append(rocketImage)
 
 
     //Id del cohete
@@ -106,6 +16,15 @@ export const getAllRocketInformation= (rocket) => {
     let idRocket = document.createElement('p')
     idRocket.id = 'id_rocket'
     idRocket.textContent = `ID: ${rocket.id}`
+
+    if (rocket.id == "5e9d0d95eda69955f709d1eb"){
+        rocketImage.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Falcon_1_Flight_4_liftoff.jpg'
+    } else {
+        rocketImage.src = rocket.flickr_images[1]
+    }
+
+    rocketDivImage.append(rocketImage)
+    
     rocketId.append(idRocket)
 
     //titulo del cohete
@@ -202,9 +121,98 @@ export const getAllRocketInformation= (rocket) => {
 
     //Contenedor de la informacion
 
-    let moreInformationRocket = documento.createElement('div')
-    moreInformationRocket.classList.add('more_information_rocket')
+    let moreInformationContainer = document.createElement('div')
+    moreInformationContainer.classList.add('more_information_rocket')
 
+    //First flight
+    
+    let firstFlight = document.createElement('div')
+    firstFlight.classList.add('first_flight')
+
+    let firstFlightIcon = document.createElement('div')
+    firstFlightIcon.classList.add('icon')
+
+    let firstFlightIconImage = document.createElement('img')
+    firstFlightIconImage.src = 'https://cdn3d.iconscout.com/3d/premium/thumb/rocket-3994327-3307661.png?f=webp'
+
+    let firstFlightText = document.createElement('div')
+    firstFlightText.classList.add('text')
+
+    let firstFlightTitle = document.createElement('h4')
+    firstFlightTitle.id = 'first_flight_title'
+    firstFlightTitle.textContent = 'First flight'
+
+
+    let firstFlightDate = document.createElement('p')
+    firstFlightDate.id = 'date_first_flight'
+    firstFlightDate.textContent = `${rocket.first_flight}`
+
+
+    moreInformationContainer.append(firstFlight)
+    firstFlight.append(firstFlightIcon)
+    firstFlightIcon.append(firstFlightIconImage)
+    firstFlight.append(firstFlightText)
+    firstFlightText.append(firstFlightTitle)
+    firstFlightText.append(firstFlightDate)
+
+    // Cost Launch
+
+    let costLaunch = document.createElement('div')
+    costLaunch.classList.add('cost_launch')
+
+    let costLaunchIcon = document.createElement('div')
+    costLaunchIcon.classList.add('icon')
+
+    let costLaunchIconImage = document.createElement('img')
+    costLaunchIconImage.src = 'https://cdn3d.iconscout.com/3d/premium/thumb/dollar-5374098-4492234.png?f=webp'
+
+    let costLaunchText = document.createElement('div')
+    costLaunchText.classList.add('text')
+
+    let costLaunchTitle = document.createElement('h4')
+    costLaunchTitle.id = 'cost_launch_title'
+    costLaunchTitle.textContent = 'Cost of launch'
+
+    let costLaunchDollars = document.createElement('p')
+    costLaunchDollars.id = 'cost_dollars'
+    costLaunchDollars.innerHTML = `${rocket.cost_per_launch} $`
+
+
+    moreInformationContainer.append(costLaunch)
+    costLaunch.append(costLaunchIcon)
+    costLaunchIcon.append(costLaunchIconImage)
+    costLaunch.append(costLaunchText)
+    costLaunchText.append(costLaunchTitle)
+    costLaunchText.append(costLaunchDollars)
+
+    // Status
+
+    let statusRocket = document.createElement('div')
+    statusRocket.classList.add('status')
+
+    let statusRocketIcon = document.createElement('div')
+    statusRocketIcon.classList.add('icon')
+
+    let statusRocketIconImage = document.createElement('img')
+    statusRocketIconImage.src = 'https://cdn3d.iconscout.com/3d/premium/thumb/switch-on-8820071-7139032.png?f=webp'
+
+    let statusRocketText = document.createElement('div')
+    statusRocketText.classList.add('text')
+
+    let statusRocketTitle = document.createElement('h4')
+    statusRocketTitle.id = 'status_title'
+    statusRocketTitle.textContent = 'Active'
+
+    let statusRocketStatus = document.createElement('p')
+    statusRocketStatus.id = 'status_rocket'
+    statusRocketStatus.innerHTML = `${rocket.active}`
+
+    moreInformationContainer.append(statusRocket)
+    statusRocket.append(statusRocketIcon)
+    statusRocketIcon.append(statusRocketIconImage)
+    statusRocket.append(statusRocketText)
+    statusRocketText.append(statusRocketTitle)
+    statusRocketText.append(statusRocketStatus)
 
 
     information.push(rocketDivImage)
@@ -212,44 +220,14 @@ export const getAllRocketInformation= (rocket) => {
     information.push(stagesTitle)
     information.push(stagesContainer)
     information.push(moreInformationTitle)
-    information.push(moreInformationRocket)
+    information.push(moreInformationContainer)
+
+
 
     
     return information
 
 }
-
-
-
-
-// <!-- mas informacion del cohete -->
-
-// <h3 id="more__information">More information</h3>
-// <!-- contenedor de la informacion -->
-// <div class="more_information_rocket">
-// <!-- first flight -->
-// <div class="first_flight">
-//     <div class="icon">
-//         <img src="https://cdn3d.iconscout.com/3d/premium/thumb/rocket-3994327-3307661.png" alt="">
-//     </div>
-//     <div class="text">
-//         <h4 id="first_flight_title">First flight</h4>
-//         <p id="date_first_flight">2021-12-01</p>
-//     </div>
-// </div>
-
-// <!-- cost launch -->
-
-// <div class="cost_launch">
-//     <div class="icon">
-//         <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dollar-5374098-4492234.png?f=webp" alt="">
-//     </div>
-//     <div class="text">
-//         <h4 id="cost_launch_title">Cost of launch</h4>
-//         <p id="cost_dollars">700000</p>
-//     </div>
-
-// </div>
 
 // <!-- status -->
 
