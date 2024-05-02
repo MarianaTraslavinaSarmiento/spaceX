@@ -8,8 +8,11 @@ import {
     progressSecondStageHeightRocket
 } from "./modulesComponents/progressBar.js";
 
+import {getAllRocketInformation} from "./modulesComponents/rocketInformation.js";
+
 
 let information__2 = document.querySelector("#information__2");
+let description__item = document.querySelector(".description__item");
 let dataRockets = await getAllRockets();
 let Totales = dataRockets.pop()
 
@@ -24,3 +27,6 @@ information__2.append(...progressHeightRocket(Totales.height, Rockets3))
 information__2.append(...progressDiameterRocket(Totales.diameter, Rockets3))
 information__2.append(...progressSecondStageDiameterRocket(Totales.composite_diameter, Rockets3))
 information__2.append(...progressSecondStageHeightRocket(Totales.composite_height, Rockets3))
+
+
+description__item.append(...getAllRocketInformation(Rockets3))
