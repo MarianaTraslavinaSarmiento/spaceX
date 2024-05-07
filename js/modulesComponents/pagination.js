@@ -14,7 +14,10 @@ import {
 } from "./tables.js";
 import { 
     informRocketEngineThrustSeaLevel, 
-    informRocketEngineThrustVacuum
+    informRocketEngineThrustVacuum,
+    countryOfEachRocket,
+    sucessRateRocket
+
 } from "./inform.js";
 import { 
     imageRockets 
@@ -118,6 +121,8 @@ const getRocketsId = async(e)=>{
     description__item.append(...getAllRocketInformation(Rocket))
     await nameRockets(Rocket.name)
 
+    await countryOfEachRocket(Rocket)
+    await sucessRateRocket(Rocket)
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
     await imageRockets(Rocket.flickr_images);
@@ -131,6 +136,8 @@ const getRocketsId = async(e)=>{
     await progressDiameterRocket(Rocket)
     await progressSecondStageDiameterRocket(Rocket)
     await progressSecondStageHeightRocket(Rocket)
+
+
 }
 export const paginationRockets = async()=>{
     let rockets = await getAllRockets();

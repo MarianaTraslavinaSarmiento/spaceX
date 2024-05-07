@@ -190,14 +190,6 @@ h3{
 
 
 
-
-
-
-
-
-
-
-
 .description__buttom{
     /* background: #00ff84; */
     display: flex;
@@ -590,4 +582,31 @@ progress[value]::-webkit-progress-value {
 progress[value]::-moz-progress-bar {
     border-radius: 10em;
     background: var(--color);
+}
+
+
+/*  Country of the rocket */
+
+/* <div class="divCountry">
+<div class="flagCountry">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="">
+</div>
+<div class="informtionCountry">
+    <h2>Country of the rocket</h2>
+    <p>United States</p>
+</div>
+
+</div> */
+
+.divCountry {
+    display: flex;
+    color: var(--color--five);
+    align-items: center;
+    justify-content: center;
+}
+
+.flagCountry img{
+
+    height: 15vh;
+
 }
