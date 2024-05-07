@@ -103,7 +103,31 @@ export const countryOfEachRocket = async(rocket)=>{
     }
 }
 
-export const sucessRateRocket = async(rocket)=>{
+// export const  = async(rocket)=>{
+//     let sucess_rate_rocket = document.querySelector('#sucess_rate_rocket')
+//     sucess_rate_rocket.innerHTML = ``
+// }
+
+export const sucessRateRocket= async(rocket)=>{
+
+    let div = document.createElement('div');
+    div.classList.add("carousel__item")
+    let divFirst = document.createElement('div');
+    divFirst.classList.add("item__progress__bar");
+    divFirst.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${rocket.success_rate_pct}%, transparent 0)`
+    let divFirstChildren = document.createElement('div');
+    divFirstChildren.classList.add("progress__value")
+    let strong = document.createElement('strong');
+    strong.textContent = "Rate of success"
+    let smallFirst = document.createElement('small');
+    smallFirst.textContent = `${rocket.success_rate_pct} %`
+    
+    divFirstChildren.append(strong, smallFirst)
+    divFirst.append(divFirstChildren)
+    div.append(divFirst)
+ 
     let sucess_rate_rocket = document.querySelector('#sucess_rate_rocket')
-    sucess_rate_rocket.innerHTML = ``
+    sucess_rate_rocket.innerHTML= ``
+    sucess_rate_rocket.append(div)
+
 }
