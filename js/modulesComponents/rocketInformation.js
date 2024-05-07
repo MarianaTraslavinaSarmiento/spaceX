@@ -2,11 +2,17 @@
 
 export const getAllRocketInformation= (rocket) => {
 
-    //Div de la imagen del cohete
+
+    //Titulo descripcion
+    let descriptionTitle = document.createElement('h3')
+    descriptionTitle.id ='description__title'
+    descriptionTitle.textContent = 'Description'
+
+    //descripcion del rocket
     let information = [];
-    let rocketDivImage = document.createElement('div')
-    rocketDivImage.classList.add('rocket__image')
-    let rocketImage = document.createElement('img')
+    let descriptionEachRocket = document.createElement('div')
+    descriptionEachRocket.classList.add('each_rocket__description')
+    descriptionEachRocket.innerHTML = `${rocket.description}`
 
 
     //Id del cohete
@@ -17,13 +23,11 @@ export const getAllRocketInformation= (rocket) => {
     idRocket.id = 'id_rocket'
     idRocket.textContent = `ID: ${rocket.id}`
 
-    if (rocket.id == "5e9d0d95eda69955f709d1eb"){
-        rocketImage.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Falcon_1_Flight_4_liftoff.jpg'
-    } else {
-        rocketImage.src = rocket.flickr_images[1]
-    }
-
-    rocketDivImage.append(rocketImage)
+    // if (rocket.id == "5e9d0d95eda69955f709d1eb"){
+    //     rocketImage.src = 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Falcon_1_Flight_4_liftoff.jpg'
+    // } else {
+    //     rocketImage.src = rocket.flickr_images[1]
+    // }
     
     rocketId.append(idRocket)
 
@@ -44,7 +48,7 @@ export const getAllRocketInformation= (rocket) => {
     let stage_photo = document.createElement('div')
     stage_photo.classList.add('stage__photo')
     let stage_photo_image = document.createElement('img')
-    stage_photo_image.src = 'https://cdn3d.iconscout.com/3d/premium/thumb/one-7211787-5889119.png?f=webp'
+    stage_photo_image.src = 'https://cdn-icons-png.freepik.com/512/3840/3840653.png'
 
     stagesContainer.append(stage1)
     stage1.append(stage_photo)
@@ -84,7 +88,7 @@ export const getAllRocketInformation= (rocket) => {
     stage2_photo.classList.add('stage__photo')
 
     let stage2_photo_image = document.createElement('img')
-    stage2_photo_image.src = 'https://cdn3d.iconscout.com/3d/premium/thumb/two-7211788-5889120.png'
+    stage2_photo_image.src = 'https://cdn-icons-png.flaticon.com/256/3840/3840738.png'
 
     stagesContainer.append(stage2)
     stage2.append(stage2_photo)
@@ -175,7 +179,7 @@ export const getAllRocketInformation= (rocket) => {
 
     let costLaunchDollars = document.createElement('p')
     costLaunchDollars.id = 'cost_dollars'
-    costLaunchDollars.innerHTML = `${rocket.cost_per_launch} $`
+    costLaunchDollars.innerHTML = `${rocket.cost_per_launch.toLocaleString('es-CO', { style: 'currency', currency: 'COP' }).replace(",00", "")}`
 
 
     moreInformationContainer.append(costLaunch)
@@ -214,9 +218,9 @@ export const getAllRocketInformation= (rocket) => {
     statusRocketText.append(statusRocketTitle)
     statusRocketText.append(statusRocketStatus)
 
-
-    information.push(rocketDivImage)
     information.push(rocketId)
+    information.push(descriptionTitle )
+    information.push(descriptionEachRocket)
     information.push(stagesTitle)
     information.push(stagesContainer)
     information.push(moreInformationTitle)
