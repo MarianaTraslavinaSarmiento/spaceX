@@ -71,11 +71,120 @@ body {
 
 .description__item {
     /* background: blue; */
-    overflow-y: auto;
     height: 75vh;
+    
 }
 
-.description__buttom {
+.rocket__image{
+    display: flex;
+    justify-content: center;   
+    border-radius: 20px;
+}
+.rocket__image img{
+
+    width: 260px;
+    height: 260px;
+
+    
+}
+
+/* ID DEL COHETE */
+
+.rocket__id{
+    justify-content: center;
+    text-align: center;
+    padding-block: 10px
+}
+
+/* ETAPAS DEL COHETE */
+
+h3{
+    padding: 10px 10px 0px 10px;
+}
+
+#more__information{
+    padding: 0px 10px 0px 10px
+}
+
+.stages__container{
+
+    margin: 10px;
+    height: 190px;
+    
+}
+
+.stage__photo{
+
+    border: 1px solid var(--color--two);
+    width: 60px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+}
+
+.stage__photo img{
+    width: 60px;
+    height: 60px;
+}
+.stage_1, .stage_2{
+
+    border: 1px solid var(--color--two);
+    margin-bottom: 10px;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    
+}
+
+.more_information_rocket{
+    padding: 10px 10px 0px 10px
+}
+
+.first_flight{
+
+    display: flex;
+    padding-bottom: 10px;
+    gap: 10px
+
+}
+
+.icon img{
+    width: 40px;
+    height: 40px;
+}
+.cost_launch{
+
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px
+}
+
+.status{
+
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description__buttom{
     /* background: #00ff84; */
     display: flex;
     justify-content: center;

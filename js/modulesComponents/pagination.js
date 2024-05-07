@@ -6,11 +6,8 @@ import {
     nameRockets 
 } from "./title.js";
 import { 
-    informationRockets,
-    informationLaunchCostRocket,
-    informationFirstFlightRocket,
-    informationWebRocket
-} from "./information.js";
+    getAllRocketInformation
+} from "./rocketInformation.js";
 import { 
     tableRocketColum1, 
     tableRocketColum2
@@ -118,11 +115,8 @@ const getRocketsId = async(e)=>{
     let Rocket = await getAllRocketsId(e.target.id);
     await clear();
     
-    await informationRockets(Rocket.country, Rocket.description)
+    description__item.append(...getAllRocketInformation(Rocket))
     await nameRockets(Rocket.name)
-    await informationLaunchCostRocket(Rocket.cost_per_launch)
-    await informationFirstFlightRocket(Rocket.first_flight)
-    await informationWebRocket(Rocket.wikipedia)
 
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
