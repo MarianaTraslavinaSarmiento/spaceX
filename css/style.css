@@ -10,8 +10,17 @@
 
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
+
 }
 
+#rocketImageCenter{
+    position: absolute;
+    top: 10%;
+    left: 37%;
+    width: 20vw;
+    
+    
+}
 *::-webkit-scrollbar {
     height: 12px;
     width: 10px;
