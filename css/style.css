@@ -11,6 +11,7 @@
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
 
+
 }
 
 #rocketImageCenter{
@@ -81,7 +82,8 @@ body {
 .description__item {
     /* background: blue; */
     height: 75vh;
-    color: var(--color--five)
+    color: var(--color--five);
+    margin-left: 30px
     
 }
 
@@ -442,8 +444,22 @@ h3{
     /* background: coral; */
     grid-area: section__footer;
     display: grid;
+    place-items: center;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas: ". footer__menu .";
+    
+    
+}
+
+.footer i{
+
+    font-size: 1.6em;
+
+}
+
+.footer i:hover{
+    color: var(--color--four);
+    
 }
 
 .footer ul {
@@ -454,6 +470,11 @@ h3{
     align-items: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    width: 110%;
+    position: absolute;
+    bottom: 0;
+    
+    
 }
 .footer ul::after{
     content: "";
