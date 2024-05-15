@@ -103,6 +103,8 @@ export const countryOfEachRocket = async(rocket)=>{
     }
 }
 
+
+
 // export const  = async(rocket)=>{
 //     let sucess_rate_rocket = document.querySelector('#sucess_rate_rocket')
 //     sucess_rate_rocket.innerHTML = ``
@@ -130,4 +132,9 @@ export const sucessRateRocket= async(rocket)=>{
     sucess_rate_rocket.innerHTML= ``
     sucess_rate_rocket.append(div)
 
+
 }
+
+
+
+

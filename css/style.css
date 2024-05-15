@@ -6,11 +6,11 @@
     box-sizing: border-box;
 
     font-family: "Roboto-Regular";
+
 }
 
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
-
 
 }
 
@@ -72,6 +72,7 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 6fr 2fr;
     grid-template-areas: "nav__1 main nav__2";
+    
 }
 
 .nav__description {
@@ -638,5 +639,6 @@ progress[value]::-moz-progress-bar {
 .flagCountry img{
 
     height: 15vh;
+    overflow: hidden;
 
 }

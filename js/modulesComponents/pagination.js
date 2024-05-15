@@ -34,6 +34,7 @@ import {
 import { 
     getAllCapsules,
     getAllCapsulesId,
+    informationCapsule,
     // getAllReuseCount
 
 } from "../modules/capsules.js";
@@ -107,6 +108,12 @@ export const clear = async()=>{
     let information__2 = document.querySelector("#information__2")
     information__2.innerHTML = ``;
 
+    let div_country = document.querySelector("#country_rocket")
+    div_country.innerHTML = ``;
+
+    let div_sucess_rate = document.querySelector("#sucess_rate_rocket")
+    div_sucess_rate.innerHTML = ``;
+
 }
 
 const getRocketsId = async(e)=>{
@@ -139,9 +146,6 @@ const getRocketsId = async(e)=>{
     await progressDiameterRocket(Rocket)
     await progressSecondStageDiameterRocket(Rocket)
     await progressSecondStageHeightRocket(Rocket)
-
-
-
 
 
 }
@@ -196,6 +200,7 @@ const getCapsulesId = async(e)=>{
     await clear();
 
     await nameRockets(Capsule.serial)
+    await informationCapsule(Capsule)
 
 }
 export const paginationCapsules = async(page=1, limit=4)=>{  
