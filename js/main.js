@@ -1,6 +1,7 @@
 import { getCompany } from "./modules/company.js";
 import { 
     getAllCompany,
+    getAllRoadster,
     load,
     paginationCapsules,
     paginationCores,
@@ -8,9 +9,12 @@ import {
     paginationDragons,
     paginationHistory,
     paginationLandpads,
+    paginationLaunchPads,
     paginationLaunches,
+    paginationPayloads,
     paginationRockets,
-    paginationShips
+    paginationShips,
+    paginationStarlink
 } from "./modulesComponents/pagination.js";
 
 
@@ -113,7 +117,7 @@ launchpads.addEventListener("click", async(e)=>{
     await footerSelect(e, launchpads)
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
-    paginacion.append(await paginationLaunchpads())
+    paginacion.append(await paginationLaunchPads())
 })
 
 
@@ -129,7 +133,7 @@ roadster.addEventListener("click", async(e)=>{
     await footerSelect(e, roadster)
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
-    paginacion.append(await paginationRoadster())
+    await getAllRoadster()
 })
 
 
