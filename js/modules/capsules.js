@@ -57,3 +57,11 @@ export const informationCapsule = async (Capsule) =>{
         `
 }
 
+export const informationCapsule2 = async (Capsule) => {
+
+    let secondTableInformation = document.querySelector("#sucess_rate_rocket")
+    secondTableInformationTable.innerHTML = /*html*/`
+    <style>${styleOfEachProperty()}</style>
+    
+}
+
