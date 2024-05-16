@@ -12,7 +12,7 @@ export function styleOfEachProperty() {
         height: 25%;
       
       }
-    #country_rocket{
+    #country_rocket, #sucess_rate_rocket{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,7 +25,7 @@ export function styleOfEachProperty() {
     }
     .title{
       
-        height: 50%;
+        height: 60%;
         border-radius: 15px 15px 0px 0px;
         background-color: #1d1f38;
         color: #ffff;
