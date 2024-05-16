@@ -5,12 +5,13 @@
     margin: 0;
     box-sizing: border-box;
 
-    font-family: "Roboto-Regular";
+    font-family: "Butti-Regular";
 
 }
 
 body {
-    background: linear-gradient(var(--color--one), var(--color--one--rgba));
+
+    background: url("https://w.wallha.com/ws/14/2aqlmiZ4.png");
 
 }
 
@@ -51,6 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .load{
     background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);

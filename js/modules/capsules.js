@@ -168,6 +168,5 @@ export const informationCapsule = async (Capsule) =>{
         </div>
         </div>`
 
-
 }
 

@@ -1,9 +1,21 @@
+import { getCompany } from "./modules/company.js";
 import { 
+    getAllCompany,
     load,
     paginationCapsules,
-    paginationRockets
+    paginationCores,
+    paginationCrew,
+    paginationDragons,
+    paginationHistory,
+    paginationLandpads,
+    paginationLaunches,
+    paginationRockets,
+    paginationShips
 } from "./modulesComponents/pagination.js";
 
+
+let buttons = document.querySelector("#buttons")
+let [rocket, capsules, crew, launches, cores, landspads, ships, company, dragons, history, launchpads, payloads, roadster, starlink] = buttons.children
 let footerSelect = async(e, id)=>{
     e.preventDefault();
     await load();
@@ -17,7 +29,6 @@ let footerSelect = async(e, id)=>{
 }
 
 
-let rocket = document.querySelector("#rocket")
 rocket.addEventListener("click", async(e)=>{
     await footerSelect(e, rocket)
     let paginacion = document.querySelector("#paginacion");
@@ -25,7 +36,7 @@ rocket.addEventListener("click", async(e)=>{
     paginacion.append(await paginationRockets())
 } )
 
-let capsules = document.querySelector("#capsules")
+
 capsules.addEventListener("click", async(e)=>{
     await footerSelect(e, capsules)
     let paginacion = document.querySelector("#paginacion");
@@ -34,4 +45,102 @@ capsules.addEventListener("click", async(e)=>{
 })
 
 
+crew.addEventListener("click", async(e)=>{
+    await footerSelect(e, crew)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCrew())
+})
+
+
+cores.addEventListener("click", async(e)=>{
+    await footerSelect(e, cores)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCores())
+})
+
+
+launches.addEventListener("click", async(e)=>{
+    await footerSelect(e, launches)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLaunches())
+})
+
+
+landspads.addEventListener("click", async(e)=>{
+    await footerSelect(e, landspads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLandpads())
+})
+
+
+ships.addEventListener("click", async(e)=>{
+    await footerSelect(e, ships)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationShips())
+})
+
+
+company.addEventListener("click", async(e)=>{
+    await footerSelect(e, company)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    await getAllCompany()
+})
+
+
+dragons.addEventListener("click", async(e)=>{
+    await footerSelect(e, dragons)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationDragons())
+})
+
+
+history.addEventListener("click", async(e)=>{
+    await footerSelect(e, history)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationHistory())
+})
+
+
+launchpads.addEventListener("click", async(e)=>{
+    await footerSelect(e, launchpads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLaunchpads())
+})
+
+
+payloads.addEventListener("click", async(e)=>{
+    await footerSelect(e, payloads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationPayloads())
+})
+
+
+roadster.addEventListener("click", async(e)=>{
+    await footerSelect(e, roadster)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationRoadster())
+})
+
+
+starlink.addEventListener("click", async(e)=>{
+    await footerSelect(e, starlink)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationStarlink())
+})
+
 rocket.click();
+
+
+
