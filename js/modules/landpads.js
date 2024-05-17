@@ -30,7 +30,9 @@ export const informationLandpads = async (Landpads) =>{
     let centerLandpadLeft = document.querySelector("#country_rocket")
     centerLandpadLeft.innerHTML = /*html*/`
 
-    <style>${styleOfEachProperty()}</style>
+    <style>${styleOfEachProperty()}
+
+    </style>
 
     <div class="table__property">
     <div class="title">
@@ -55,7 +57,9 @@ export const informationLandpads = async (Landpads) =>{
     <div class="value">
         <p>${Landpads.locality}</p>
     </div>
-    </div>`
+    </div>
+    
+`
 
     let centerLandpadRight = document.querySelector("#sucess_rate_rocket")
     centerLandpadRight.innerHTML = /*html*/`
@@ -99,15 +103,25 @@ export const informationLandpads = async (Landpads) =>{
         color: var(--color--five);
     }
 
-    </style>
-    <h1 style="color: var(--color--five); margin-inline: auto; margin-top: 20px">ID</h1>
-    <hr style="color: var(--color--five); margin-block: 6px; width: 80%">
-    <table>
-        <tr>
-            <td style="font-weight: bold">${Landpads.id}</td>
-        </tr>
+    #image__landpad__bx{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
 
-    </table>`
+    #image__landpad__bx img{
+
+        width: 70%
+
+    }
+
+    </style>
+
+    <div id="image__landpad__bx">
+        <img style="width: auto; height: 300px;" src="${Landpads.images.large}" referrerpolicy = "no-referrer" alt="">
+    </div>`
 
 
     let rightLanpadDetails = document.querySelector("#information__2")
@@ -136,32 +150,36 @@ export const informationLandpads = async (Landpads) =>{
 
     </table>`
 
-    // let leftLanpadLaunches = document.querySelector("#description__item")
-    // leftLanpadLaunches.innerHTML = /*html*/`
+    let leftLanpadLaunches = document.querySelector("#description__item")
+    leftLanpadLaunches.innerHTML = /*html*/`
 
-    // <style>
+    <style>
 
-    // #section__image {
-    //     display:flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     justify-content: center;
+    #section__image {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         
-    // }
+    }
 
-    // #details__table {
-    //     margin-right: 30px
-    // }
+    #details__table {
+        margin-right: 30px
+    }
 
-    // </style>
-    // <h1 style="color: var(--color--five); margin-inline: auto; margin-top: 20px">LAUNCHES</h1>
-    // <hr style="color: var(--color--five); margin-block: 6px; width: 80%">
-    // <table id="details__table">
-    //     <tr>
-    //         <td style="font-weight: bold; color: #ffff; margin-right: 20px">${Landpads.launches || " "}</td>
+    </style>
+    <h1 style="color: var(--color--five); margin-inline: auto; margin-top: 20px">LAUNCHES</h1>
+    <hr style="color: var(--color--five); margin-block: 6px; width: 80%">
+    <div id="launchesBox" style="height: 700px; overflow-y: scroll; width: 80%"></div>`
 
-    // </table>`
+    let launchesBox = document.querySelector("#launchesBox")
 
+
+    for (let launch of Landpads.launches) {
+        launchesBox.innerHTML += /*html*/`
+
+        <p style="font-weight: bold; color: #ffff; margin-right: 20px; font-size: 15px">${launch}</p>`
+    }
 
 
 }
