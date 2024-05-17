@@ -38,7 +38,7 @@ import {
     // getAllReuseCount
 
 } from "../modules/capsules.js";
-import { getAllCrew, getAllCrewId } from "../modules/crew.js";
+import { getAllCrew, getAllCrewId, informationCrew } from "../modules/crew.js";
 import { getAllLaunches, getAllLaunchesId } from "../modules/launches.js";
 import { getAllCores, getAllCoresId } from "../modules/cores.js";
 import { getAllLandpads, getAllLandpadsId } from "../modules/landpads.js";
@@ -281,6 +281,7 @@ const getCrewId = async(e)=>{
     await clear();
 
     await nameRockets(Crew.name)
+    await informationCrew(Crew)
 
 }
 
