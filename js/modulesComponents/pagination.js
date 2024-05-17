@@ -39,7 +39,7 @@ import {
 
 } from "../modules/capsules.js";
 import { getAllCrew, getAllCrewId, informationCrew } from "../modules/crew.js";
-import { getAllLaunches, getAllLaunchesId } from "../modules/launches.js";
+import { getAllLaunches, getAllLaunchesId, informationLaunches } from "../modules/launches.js";
 import { getAllCores, getAllCoresId } from "../modules/cores.js";
 import { getAllLandpads, getAllLandpadsId } from "../modules/landpads.js";
 import { getAllShips, getAllShipsId } from "../modules/ships.js";
@@ -345,6 +345,8 @@ const getLaunchesId = async(e)=>{
     await clear();
 
     await nameRockets(Launches.name)
+    await informationLaunches(Launches)
+
 
 }
 

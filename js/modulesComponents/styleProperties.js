@@ -9,7 +9,7 @@ export function styleOfEachProperty() {
     .table__property{
 
         width: 90%;
-        height: 25%;
+        height: 23%;
       
       }
     #country_rocket, #sucess_rate_rocket{
