@@ -41,7 +41,7 @@ import {
 import { getAllCrew, getAllCrewId, informationCrew } from "../modules/crew.js";
 import { getAllLaunches, getAllLaunchesId, informationLaunches } from "../modules/launches.js";
 import { getAllCores, getAllCoresId, informationCores } from "../modules/cores.js";
-import { getAllLandpads, getAllLandpadsId } from "../modules/landpads.js";
+import { getAllLandpads, getAllLandpadsId, informationLandpads } from "../modules/landpads.js";
 import { getAllShips, getAllShipsId } from "../modules/ships.js";
 import { getCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId } from "../modules/dragons.js";
@@ -474,6 +474,7 @@ const getLandpadsId = async(e)=>{
     await clear();
 
     await nameRockets(Landpads.full_name)
+    await informationLandpads(Landpads)
 
 }
 

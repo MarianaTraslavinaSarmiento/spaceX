@@ -110,6 +110,14 @@ export const informationCores = async (Cores) =>{
         <tr>
             <td style="font-weight: bold">${Cores.launches[2] || " "}</td>
         </tr>
+
+        <tr>
+            <td style="font-weight: bold">${Cores.launches[3] || " "}</td>
+        </tr>
+
+        <tr>
+            <td style="font-weight: bold">${Cores.launches[4] || " "}</td>
+        </tr>
     </table>`
 
 }

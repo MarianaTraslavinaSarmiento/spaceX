@@ -202,11 +202,15 @@ export const informationLaunches = async (Launches) =>{
     </style>
     <h1 style="color: var(--color--five); margin-inline: auto; margin-top: 20px">DETAILS</h1>
     <hr style="color: var(--color--five); margin-block: 6px; width: 80%">
-    <table>
+    <table >
         <tr>
-            <td style="font-weight: bold; color: #ffff; margin-right: 20px">${Launches.details || " "}</td>
+            <td style="font-weight: bold; color: #ffff">${Launches.details || " "}</td>
 
     </table>`
+
+    
+
+
 }
 
 
