@@ -40,7 +40,7 @@ import {
 } from "../modules/capsules.js";
 import { getAllCrew, getAllCrewId, informationCrew } from "../modules/crew.js";
 import { getAllLaunches, getAllLaunchesId, informationLaunches } from "../modules/launches.js";
-import { getAllCores, getAllCoresId } from "../modules/cores.js";
+import { getAllCores, getAllCoresId, informationCores } from "../modules/cores.js";
 import { getAllLandpads, getAllLandpadsId } from "../modules/landpads.js";
 import { getAllShips, getAllShipsId } from "../modules/ships.js";
 import { getCompany } from "../modules/company.js";
@@ -410,6 +410,7 @@ const getCoresId = async(e)=>{
     await clear();
 
     await nameRockets(Cores.serial)
+    await informationCores(Cores)
 
 }
 
