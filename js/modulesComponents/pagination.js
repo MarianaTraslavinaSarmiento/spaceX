@@ -42,7 +42,7 @@ import { getAllCrew, getAllCrewId, informationCrew } from "../modules/crew.js";
 import { getAllLaunches, getAllLaunchesId, informationLaunches } from "../modules/launches.js";
 import { getAllCores, getAllCoresId, informationCores } from "../modules/cores.js";
 import { getAllLandpads, getAllLandpadsId, informationLandpads } from "../modules/landpads.js";
-import { getAllShips, getAllShipsId } from "../modules/ships.js";
+import { getAllShips, getAllShipsId, informationShips } from "../modules/ships.js";
 import { getCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId } from "../modules/dragons.js";
 import { getAllHistory, getAllHistoryId } from "../modules/history.js";
@@ -350,7 +350,6 @@ const getLaunchesId = async(e)=>{
 
 }
 
-
 export const paginationLaunches = async(page=1, limit=4)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLaunches(page, limit)
@@ -413,7 +412,6 @@ const getCoresId = async(e)=>{
     await informationCores(Cores)
 
 }
-
 
 export const paginationCores = async(page=1, limit=4)=>{  
      
@@ -478,7 +476,6 @@ const getLandpadsId = async(e)=>{
 
 }
 
-
 export const paginationLandpads = async(page=1, limit=4)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLandpads(page, limit)
@@ -538,6 +535,7 @@ const getShipsId = async(e)=>{
     await clear();
 
     await nameRockets(Ships.name)
+    await informationShips(Ships)
 
 }
 

@@ -113,9 +113,11 @@ export const informationLandpads = async (Landpads) =>{
 
     #image__landpad__bx img{
 
-        width: 70%
-
+        width: 70%;
+        overflow: hidden;
     }
+
+    
 
     </style>
 

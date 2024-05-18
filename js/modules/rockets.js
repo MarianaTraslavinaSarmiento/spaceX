@@ -146,6 +146,7 @@ export const getRocketSecondStageCompositeFairingHeightTotal  = async() =>{
     let {second_stage: {payloads: {composite_fairing: {height}}}} = maxHeightCompositeFairingRocket
     // console.log(height);
     return height;
+    
 }
 export const getAllRocketEngineTotal  = async() =>{
     let config = {

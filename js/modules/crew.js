@@ -136,3 +136,5 @@ export const informationCrew = async (Crew) =>{
     
         <img style="width: auto; height: 300px;" src="${Crew.image}" referrerpolicy = "no-referrer" alt="">`
     }    
+
+    
