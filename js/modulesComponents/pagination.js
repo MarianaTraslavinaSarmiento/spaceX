@@ -46,7 +46,7 @@ import { getAllShips, getAllShipsId, informationShips } from "../modules/ships.j
 import { getCompany, informationCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId, informationDragons } from "../modules/dragons.js";
 import { getAllHistory, getAllHistoryId, informationHistory } from "../modules/history.js";
-import { getAllLaunchPads, getAllLaunchPadsId } from "../modules/launchpads.js";
+import { getAllLaunchPads, getAllLaunchPadsId, informationLaunchPads } from "../modules/launchpads.js";
 import { getAllPayloads, getAllPayloadsId } from "../modules/payloads.js";
 import { getRoadster } from "../modules/roadster.js";
 import { getAllStarlink, getAllStarlinkId } from "../modules/starlink.js";
@@ -735,6 +735,7 @@ const getLaunchPadsId = async(e)=>{
     await clear();
 
     await nameRockets(LaunchPads.name)
+    await informationLaunchPads(LaunchPads)
 
 }
 
