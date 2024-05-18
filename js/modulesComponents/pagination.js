@@ -43,7 +43,7 @@ import { getAllLaunches, getAllLaunchesId, informationLaunches } from "../module
 import { getAllCores, getAllCoresId, informationCores } from "../modules/cores.js";
 import { getAllLandpads, getAllLandpadsId, informationLandpads } from "../modules/landpads.js";
 import { getAllShips, getAllShipsId, informationShips } from "../modules/ships.js";
-import { getCompany } from "../modules/company.js";
+import { getCompany, informationCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId, informationDragons } from "../modules/dragons.js";
 import { getAllHistory, getAllHistoryId } from "../modules/history.js";
 import { getAllLaunchPads, getAllLaunchPadsId } from "../modules/launchpads.js";
