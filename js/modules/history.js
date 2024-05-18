@@ -34,7 +34,7 @@ export const informationHistory = async (History) =>{
             <h3>Event date utc</h3>
         </div>
         <div class="value">
-            <p>${History.event_date_utc}</p>
+            <p>${History.event_date_utc.slice(1,10)}</p>
         </div>
         </div>
         <div class="table__property">

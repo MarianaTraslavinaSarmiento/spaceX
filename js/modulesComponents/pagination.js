@@ -47,9 +47,9 @@ import { getCompany, informationCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId, informationDragons } from "../modules/dragons.js";
 import { getAllHistory, getAllHistoryId, informationHistory } from "../modules/history.js";
 import { getAllLaunchPads, getAllLaunchPadsId, informationLaunchPads } from "../modules/launchpads.js";
-import { getAllPayloads, getAllPayloadsId } from "../modules/payloads.js";
-import { getRoadster } from "../modules/roadster.js";
-import { getAllStarlink, getAllStarlinkId } from "../modules/starlink.js";
+import { getAllPayloads, getAllPayloadsId, informationPayloads } from "../modules/payloads.js";
+import { getRoadster, informationRoadster } from "../modules/roadster.js";
+import { getAllStarlink, getAllStarlinkId, informationStarlink } from "../modules/starlink.js";
 
 
 export const load = async()=>{
@@ -798,7 +798,8 @@ export const getPayloadsId = async(e)=>{
     let Payloads  = await getAllPayloadsId(e.target.id);
     await clear();
 
-    await nameRockets(Payloads .name)
+    await nameRockets(Payloads.name)
+    await informationPayloads(Payloads)
 
 }
 
@@ -844,6 +845,7 @@ export const getAllRoadster = async()=>{
     let data = await getRoadster()
     await clear();
     await nameRockets(data.name)
+    await informationRoadster(data)
 
 
 }
@@ -871,6 +873,7 @@ const getStarlinkId = async(e)=>{
     await clear();
 
     await nameRockets(Starlink.spaceTrack.OBJECT_NAME)
+    await informationStarlink(Starlink)
 
 }
 
