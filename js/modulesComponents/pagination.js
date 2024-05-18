@@ -44,7 +44,7 @@ import { getAllCores, getAllCoresId, informationCores } from "../modules/cores.j
 import { getAllLandpads, getAllLandpadsId, informationLandpads } from "../modules/landpads.js";
 import { getAllShips, getAllShipsId, informationShips } from "../modules/ships.js";
 import { getCompany } from "../modules/company.js";
-import { getAllDragons, getAllDragonsId } from "../modules/dragons.js";
+import { getAllDragons, getAllDragonsId, informationDragons } from "../modules/dragons.js";
 import { getAllHistory, getAllHistoryId } from "../modules/history.js";
 import { getAllLaunchPads, getAllLaunchPadsId } from "../modules/launchpads.js";
 import { getAllPayloads, getAllPayloadsId } from "../modules/payloads.js";
@@ -581,6 +581,7 @@ export const getAllCompany = async()=>{
     let data = await getCompany()
     await clear()
     await nameRockets(data.name)
+    await informationCompany(data)
 
 
 }
@@ -608,6 +609,7 @@ const getDragonsId = async(e)=>{
     await clear();
 
     await nameRockets(Dragons.name)
+    await informationDragons(Dragons)
 
 }
 

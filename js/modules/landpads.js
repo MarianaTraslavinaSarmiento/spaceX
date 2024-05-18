@@ -183,5 +183,4 @@ export const informationLandpads = async (Landpads) =>{
         <p style="font-weight: bold; color: #ffff; margin-right: 20px; font-size: 15px">${launch}</p>`
     }
 
-
 }
