@@ -45,7 +45,7 @@ import { getAllLandpads, getAllLandpadsId, informationLandpads } from "../module
 import { getAllShips, getAllShipsId, informationShips } from "../modules/ships.js";
 import { getCompany, informationCompany } from "../modules/company.js";
 import { getAllDragons, getAllDragonsId, informationDragons } from "../modules/dragons.js";
-import { getAllHistory, getAllHistoryId } from "../modules/history.js";
+import { getAllHistory, getAllHistoryId, informationHistory } from "../modules/history.js";
 import { getAllLaunchPads, getAllLaunchPadsId } from "../modules/launchpads.js";
 import { getAllPayloads, getAllPayloadsId } from "../modules/payloads.js";
 import { getRoadster } from "../modules/roadster.js";
@@ -582,8 +582,6 @@ export const getAllCompany = async()=>{
     await clear()
     await nameRockets(data.name)
     await informationCompany(data)
-
-
 }
 
 const getDragonsId = async(e)=>{
@@ -673,6 +671,7 @@ const getHistoryId = async(e)=>{
     await clear();
 
     await nameRockets(History.title)
+    await informationHistory(History)
 
 }
 

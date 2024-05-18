@@ -260,6 +260,5 @@ export const informationCompany = async (Company) =>{
     </div>
     </div>`
 
-
 }
 
